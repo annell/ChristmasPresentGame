@@ -2,6 +2,28 @@ import smtplib, ssl, argparse, random
 from getpass import getpass
 from message import GetMessage
 
+class Participant:
+    def __init__(self, name, email, wishList=None):
+        self.Name = name
+        self.Email = email
+        self.WishList = wishList
+    
+    def __str__(self):
+        return "Participant Name={}, Email={}, Wishlist={}".format(self.Name, self.Email, self.WishList)
+
+    Name = ""
+    Email = ""
+    WishList = []
+
+participantsDefinition = [
+    Participant("Stefan Annell", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
+    Participant("Anna-Karin Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
+    Participant("Boel Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
+    Participant("Mats Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
+    Participant("Jakob Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
+    Participant("Gustav Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
+]
+
 def SendEmail(emailServer, sender_email, password, reciever_email, message):
     context = ssl.create_default_context()
     try:
@@ -43,28 +65,6 @@ class EmailServer:
 emailServers = [
     EmailServer("@outlook.com", "smtp-mail.outlook.com", 587),
     EmailServer("@gmail.com", "smtp.gmail.com", 587),
-]
-
-class Participant:
-    def __init__(self, name, email, wishList=None):
-        self.Name = name
-        self.Email = email
-        self.WishList = wishList
-    
-    def __str__(self):
-        return "Participant Name={}, Email={}, Wishlist={}".format(self.Name, self.Email, self.WishList)
-
-    Name = ""
-    Email = ""
-    WishList = []
-
-participantsDefinition = [
-    Participant("Stefan Annell", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Anna-Karin Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Boel Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Mats Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Jakob Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Gustav Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
 ]
 
 class PresentTarget:

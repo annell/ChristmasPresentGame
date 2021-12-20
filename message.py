@@ -1,10 +1,10 @@
 def GetRules():
-    return """    - It is absolutly forbidden to reveal who you will give your present to.
-    - The price of the present should be around 1000 kr.
-    - You should respect the wishing list (except if you have a really good idea of course!).
-    - There needs to be a good rhyme when giving out the present!
+    return """    - Det är absolut förbjudet att avslöja vem du ska ge present till.
+    - Priset på presenten ska vara ca 1000 kr.
+    - Du måste respektera önskelistan (förutom om du har en annan jätte bra idé!).
+    - Du måste göra ett bra rim till presenten!
     
-Punishment for breaking with any of the rules will result in that you need to go and wrestle with the bears.
+Straffet för att misslyckas med att följa reglerna är att du måste gå ut i skogen tillsammans med Mats och brottas med björnen.
 """
 
 def GetWishlist(target):
@@ -13,8 +13,11 @@ def GetWishlist(target):
         wishlist += "- " + wish + "\n"
     return wishlist
 
+def safe_str(obj):
+    return str(obj)
+
 def GetMessage(giver, target):
-    SUBJECT = "Christmas Game 2021"
-    TEXT = "Hello {}!\n\nYou should give your christmas present to {} and their christmas present wish list is: \n{}\nThe rules for this years Christmas Game are: \n{}\nBest regards,\nJulklappsspelsfixaren".format(giver.Name, target.Name, GetWishlist(target), GetRules())
+    SUBJECT = "Julklappsspelet 2021"
+    TEXT = "Hej {}!\n\nDu ska ge din present till {} vars önskelista är: \n{}\nReglerna för årets julklapsspel är: \n{}\nMvh,\nJulklappsspelsfixaren".format(giver.Name, target.Name, GetWishlist(target), GetRules())
     message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
-    return message
+    return safe_str(message)

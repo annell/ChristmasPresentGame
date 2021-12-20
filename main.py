@@ -16,12 +16,55 @@ class Participant:
     WishList = []
 
 participantsDefinition = [
-    Participant("Stefan Annell", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Anna-Karin Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Boel Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Mats Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Jakob Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
-    Participant("Gustav Ek", "steann@kth.se", ["En sko", "En skooter", "Boulder kritpase"]),
+    Participant("Stefan Annell",
+            "steann@kth.se",
+            [
+            "Några snygga klätter byxor, t ex: https://www.addnature.com/black-diamond-notion-pants-herr-M709782.html?vgid=G1265652&cgid=236014",
+            "Någon snygg patagonia tröja eller t-short, storlek M",
+            "Boulder kritpåse, t ex: https://www.addnature.com/petzl-sakab-chalk-bag-M917323.html",
+            "Svarta strumpor, storlek 44 (brukar köpa från brothers)"
+        ]),
+    Participant("Anna-Karin Ek",
+            "annakarin.ek@gmail.com",
+            [
+            "FLEECEJACKA Sarek Camp Jacket mörkgrön (storlek SMALL) 999 kr. KÖP FRÅN DENNA BUTIK, så kan jag byta ut den om storleken ej är bra: https://www.grandpastore.se/sv/sarek-camp-jacket-ws-field-green",
+            "MASSAGE full body massage, 1045 kr (måndag-torsdag): https://elementsspa.co/stockholm/behandling/massage/",
+            "BEIGE Wool overshirt, Storlek SMALL, 1245 kr: https://www.arket.com/en_sek/women/shirts-blouses/product.wool-overshirt-beige.0932372003.html?gclid=CjwKCAiAhreNBhAYEiwAFGGKPM_enzvnloDccJosD_3uLV6lsSAENXTFAU9oz9dgE6Bbd01yAqB7TRoC23wQAvD_BwE&fbclid=IwAR2lu9JcYiaPggfPM_C18eaK5MC9DrF1P8Ftd0LGBJfpFvvHpDHp9Y9EwQw"
+        ]),
+
+    Participant("Boel Ek",
+            "boel.ek@live.se",
+            [
+            "En ny putter. Mats kan fixa detta via vår pro som bor här på Bergnäset.",
+            "Presentkort på resturang CG:s",
+            "Tidningspremunation på t ex Årets Runt och Allers"
+        ]),
+
+    Participant("Mats Ek",
+            "mats.ek@hotmail.se",
+            [
+            "Varma rejäla vinterhandskar (typ skidhandskar)",
+            "Underställs långkalsonger (typ aclima)",
+            "Coola och bra solglasögon (typ Gustavs med något specialglas så att naturen blir grönare)"
+        ]),
+
+    Participant("Gustav Ek",
+            "gustav.ek86@gmail.com",
+            [
+            "En bra kött-termometer",
+            "Ansiktskräm",
+            "Någonting roligt från typ Cervera, kök/inredning",
+            "Någon rolig t-shirt storlek M",
+            "Skoterkänga Polyver Winter"
+        ]),
+
+    Participant("Jacob Ek",
+            "jacobek98@gmail.com",
+            [
+            "Rakapparat (ej trimmer)",
+            "Skäggvårdsprodukter",
+            "Kalsonger (storlek L)"
+        ]),
 ]
 
 def SendEmail(emailServer, sender_email, password, reciever_email, message):

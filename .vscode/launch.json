@@ -36,6 +36,7 @@
             "console": "integratedTerminal",
             "justMyCode": true,
             "args": [
+                "--email", "steann87@outlook.com",
             ]
         }
     ]

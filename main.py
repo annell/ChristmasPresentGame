@@ -58,9 +58,9 @@ participantsDefinition = [
     Participant("Jacob Ek",
             "jacobek98@gmail.com",
             [
-            "Rakapparat (ej trimmer)",
-            "Skäggvårdsprodukter",
-            "Kalsonger (storlek L)"
+                "https://beaumont-pictures.com/products/shoulder-zip-sweater - storlek M", 
+                "https://beaumont-pictures.com/products/tracksweat-2000 - storlek M", 
+                "https://beaumont-pictures.com/products/tact-sweater?variant=39616622395531 - storlek M"
         ]),
 ]
 
@@ -85,7 +85,9 @@ def SendEmail(emailServer, sender_email, password, reciever_email, message):
         print("Email sent successfully.")
     except Exception as e:
         # Print any error messages to stdout
+        # Remember to fix smtplib.py, gets encoding error if its ascii! 875: msg = _fix_eols(msg).encode('utf-8')
         print(e)
+
     finally:
         server.quit() 
 
@@ -212,8 +214,7 @@ def main(sender_email, password, test):
     else:
         print("Email server not defined in EmailServers, cannot send away email.")
 
-    
-
+"""
 import customtkinter
 def gui(email="Email", password=""):
     customtkinter.set_appearance_mode("System")  # Modes: system (default), light, dark
@@ -248,6 +249,7 @@ def gui(email="Email", password=""):
         text.pack(pady = 5, padx = 5)
 
     app.mainloop()
+"""    
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
